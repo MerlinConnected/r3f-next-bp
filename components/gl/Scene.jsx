@@ -1,15 +1,9 @@
-import { Canvas } from '@react-three/fiber';
-import {
-  OrbitControls,
-  Center,
-  Environment,
-  Float,
-  Loader,
-} from '@react-three/drei';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { OrbitControls, Environment, Loader } from '@react-three/drei';
 
 import { useControls } from 'leva';
 
-import { Suspense } from 'react';
+import { Suspense, useRef, useState } from 'react';
 
 export default function Scene() {
   const { color } = useControls({
