@@ -52,7 +52,7 @@ function Model() {
             target={[0, 0, 0]}
           />
           <ambientLight intensity={1} />
-          <Environment preset="city" />
+          <Environment preset="dawn" />
         </Suspense>
         <Model />
       </Canvas>
