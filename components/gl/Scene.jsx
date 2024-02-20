@@ -37,7 +37,7 @@ function Model() {
 }
   return (
     <>
-      <Canvas shadows>
+      <Canvas shadows camera={{ fov: '72' }}>
         <Suspense fallback={null}>
           <mesh>
             <boxGeometry args={[1, 1, 1]} />
