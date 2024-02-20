@@ -5,7 +5,6 @@ import { useControls } from 'leva';
 
 import { Suspense, useRef, useState } from 'react';
 
-export default function Scene() {
 function Model() {
   const meshRef = useRef();
 
@@ -35,14 +34,12 @@ function Model() {
     </mesh>
   );
 }
+
+export default function Scene() {
   return (
     <>
       <Canvas shadows camera={{ fov: '72' }}>
         <Suspense fallback={null}>
-          <mesh>
-            <boxGeometry args={[1, 1, 1]} />
-            <meshStandardMaterial color={color} />
-          </mesh>
           <OrbitControls />
           <ambientLight intensity={1} />
           <Environment preset="dawn" />
